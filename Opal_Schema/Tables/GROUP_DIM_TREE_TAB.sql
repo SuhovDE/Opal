@@ -1,0 +1,33 @@
+--
+-- GROUP_DIM_TREE_TAB  (Table) 
+--
+--   Row Count: 51174
+CREATE TABLE OPAL_FRA.GROUP_DIM_TREE_TAB
+(
+  CODE        VARCHAR2(30 CHAR),
+  DESCR       VARCHAR2(256 CHAR),
+  GRP_ID      INTEGER,
+  ORDNO       NUMBER,
+  PARENT_ID   INTEGER,
+  DIM_ID      INTEGER,
+  DIM_LEV_ID  INTEGER,
+  PREDEFINED  CHAR(1 BYTE),
+  GRP_TYPE    CHAR(1 BYTE),
+  LEV         NUMBER,
+  RN          NUMBER,
+  DOM_ID      INTEGER,
+  DATE_FROM   DATE,
+  DATE_TO     DATE
+)
+TABLESPACE USERS
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );

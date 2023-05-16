@@ -1,0 +1,32 @@
+--
+-- DOMAINS  (Table) 
+--
+--   Row Count: 28
+CREATE TABLE OPAL_FRA.DOMAINS
+(
+  ID           INTEGER,
+  DOMAIN_KIND  CHAR(1 BYTE),
+  SCODE        VARCHAR2(30 CHAR),
+  SUF          VARCHAR2(40 CHAR),
+  ABBR         VARCHAR2(40 CHAR),
+  SHORT        VARCHAR2(256 CHAR),
+  FULL         VARCHAR2(4000 CHAR)
+)
+TABLESPACE USERS
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          16K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+COMMENT ON TABLE OPAL_FRA.DOMAINS IS 'Domains of the system';
+
+COMMENT ON COLUMN OPAL_FRA.DOMAINS.ID IS 'PK';
+
+COMMENT ON COLUMN OPAL_FRA.DOMAINS.DOMAIN_KIND IS 'B-basic, not B - not';

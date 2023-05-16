@@ -1,0 +1,41 @@
+--
+-- TMP_REPORT_OPAL_CROSS_CHECK_OS  (Table) 
+--
+--   Row Count: 24
+CREATE TABLE OPAL_FRA.TMP_REPORT_OPAL_CROSS_CHECK_OS
+(
+  ID               INTEGER,
+  SIDE             VARCHAR2(3 BYTE),
+  AIRLINE          VARCHAR2(6 BYTE),
+  FLIGHTNO         NUMBER(5),
+  SUFFIX           VARCHAR2(3 BYTE),
+  PLANDT           DATE,
+  ACTUALDT         DATE,
+  ID_FR            INTEGER,
+  AP_OWN           VARCHAR2(3 BYTE),
+  STATUS           VARCHAR2(1 BYTE),
+  UPDATED          DATE,
+  PART             VARCHAR2(3 BYTE),
+  REGISTRATION     VARCHAR2(9 BYTE),
+  PAX              INTEGER,
+  CARGO            INTEGER,
+  PAXTRANSFER      INTEGER,
+  EXPORTDT         DATE,
+  UPDATEDT         DATE,
+  VERSIONDT        DATE,
+  VALIDATIONDT     DATE,
+  FLIGHTTYPE       VARCHAR2(6 CHAR),
+  HANDLINGSTATION  VARCHAR2(6 CHAR)
+)
+TABLESPACE USERS
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );

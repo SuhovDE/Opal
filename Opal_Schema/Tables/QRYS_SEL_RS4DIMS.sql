@@ -1,0 +1,31 @@
+--
+-- QRYS_SEL_RS4DIMS  (Table) 
+--
+--  Dependencies: 
+--   QRYS_SEL (Table)
+--
+--   Row Count: 14679
+CREATE TABLE OPAL_FRA.QRYS_SEL_RS4DIMS
+(
+  QRY_ID  INTEGER,
+  ORDNO   INTEGER,
+  VAL     VARCHAR2(30 BYTE), 
+  CONSTRAINT P_QRYS_SEL_RS4DIMS
+  PRIMARY KEY
+  (QRY_ID, ORDNO, VAL)
+  ENABLE VALIDATE
+)
+ORGANIZATION INDEX
+PCTTHRESHOLD 50
+TABLESPACE USERS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );

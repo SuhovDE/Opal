@@ -1,0 +1,9 @@
+--
+-- CONDEXPRLIST  (Type) 
+--
+--  Dependencies: 
+--   CONDEXPROBJ (Type)
+--   STANDARD (Package)
+--
+CREATE OR REPLACE TYPE OPAL_FRA."CONDEXPRLIST" AS TABLE OF CondExprOBJ
+/

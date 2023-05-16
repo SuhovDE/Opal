@@ -1,0 +1,45 @@
+--
+-- RS_CODES4DIMS  (Table) 
+--
+--   Row Count: 89
+CREATE TABLE OPAL_FRA.RS_CODES4DIMS
+(
+  DIM_LEV_ID      INTEGER,
+  ATTR_TYPE_CODE  VARCHAR2(15 CHAR),
+  ATTR_TYPE_NAME  VARCHAR2(50 CHAR),
+  RS_NAME_SUF     VARCHAR2(15 CHAR)             NOT NULL,
+  DISPLAY_FORMAT  VARCHAR2(30 CHAR),
+  COLNAME         VARCHAR2(30 CHAR),
+  NOSHOW          CHAR(1 BYTE),
+  SCODE           VARCHAR2(30 CHAR)             NOT NULL
+)
+TABLESPACE USERS
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           );
+
+COMMENT ON TABLE OPAL_FRA.RS_CODES4DIMS IS 'Description of codes, which can be provided for dimension levels';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.DIM_LEV_ID IS 'Ref to dimension_level';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.ATTR_TYPE_CODE IS 'Type of attr code';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.ATTR_TYPE_NAME IS 'Name of attr type code';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.RS_NAME_SUF IS 'Suffix of column name in RS set';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.DISPLAY_FORMAT IS 'For date columns - format mask';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.COLNAME IS 'Name of a column in the table for dim_level';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.NOSHOW IS 'Not null - don´t show the item in the query result';
+
+COMMENT ON COLUMN OPAL_FRA.RS_CODES4DIMS.SCODE IS 'String unique code';

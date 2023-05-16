@@ -1,0 +1,14 @@
+--
+-- GROUPS4LANG  (View) 
+--
+--  Dependencies: 
+--   GROUPS (Table)
+--
+CREATE OR REPLACE FORCE VIEW OPAL_FRA.GROUPS4LANG
+(ID, PREDEFINED, GRP_TYPE, IS_LEAF, TYPE_ID, 
+ DIM_ID, GRP_SUBTYPE, DOM_ID, IS_GRP_PRIV, CR_USER, 
+ SUF, ABBR, SHORT, FULL, SCODE)
+BEQUEATH DEFINER
+AS 
+select g."ID",g."PREDEFINED",g."GRP_TYPE",g."IS_LEAF",g."TYPE_ID",g."DIM_ID",g."GRP_SUBTYPE",g."DOM_ID",g."IS_GRP_PRIV",g."CR_USER",g."SUF",g."ABBR",g."SHORT",g."FULL", g.abbr scode
+ from groups g where grp_type='P';

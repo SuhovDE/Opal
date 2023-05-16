@@ -1,0 +1,9 @@
+--
+-- CONDELEMLIST  (Type) 
+--
+--  Dependencies: 
+--   CONDELEMOBJ (Type)
+--   STANDARD (Package)
+--
+CREATE OR REPLACE TYPE OPAL_FRA."CONDELEMLIST" AS TABLE OF CondElemOBJ
+/

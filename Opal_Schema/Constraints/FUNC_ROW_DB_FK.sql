@@ -1,0 +1,10 @@
+-- 
+-- FUNC_ROW_DB  (Table Foreign Keys)
+-- 
+-- Dependencies: 
+--    FUNC_ROW_ (Table)
+ALTER TABLE OPAL_FRA.FUNC_ROW_DB ADD (
+  CONSTRAINT R_FUNC_ROW_DB$F 
+  FOREIGN KEY (ID) 
+  REFERENCES OPAL_FRA.FUNC_ROW_ (ID)
+  ENABLE VALIDATE);
